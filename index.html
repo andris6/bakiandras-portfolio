@@ -10,12 +10,14 @@
     <nav class="navbar navbar-dark bg-dark p-3 d-flex justify-content-between">
         <span class="navbar-brand mb-0 h1">Baki András</span>
         <select id="certificateSelect" class="form-select w-auto">
-            <option value="">Válassz egy certificate-et...</option>
-            <option value="javascript.png">JavaScript Algorithms and Data Structures</option>
+            <option value="">Válassz egy oklevelet...</option>
+            <option value="javascript.png" data-issuer="freeCodeCamp" data-date="2025-03-23" data-verification="https://www.freecodecamp.org/certification/fcc9fd64275-d1eb-44dc-9368-2131ba98be4e/javascript-algorithms-and-data-structures-v8">JavaScript Algorithms and Data Structures</option>
         </select>
     </nav>
     
     <div class="container mt-5 text-center">
+        <h3 id="certificateTitle"></h3>
+        <p id="certificateDetails"></p>
         <iframe id="certificateViewer" src="" width="80%" height="500px" style="border: 1px solid #ccc;"></iframe>
         <br>
         <a id="downloadLink" href="#" class="btn btn-primary mt-3" download>Letöltés</a>
