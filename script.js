@@ -2,12 +2,13 @@ document.getElementById("certificateSelect").addEventListener("change", function
     let selectedOption = this.options[this.selectedIndex];
     let selectedFile = selectedOption.value;
     let viewer = document.getElementById("certificateViewer");
+    let image = document.getElementById("certificateImage");
     let downloadLink = document.getElementById("downloadLink");
     let title = document.getElementById("certificateTitle");
     let details = document.getElementById("certificateDetails");
 
     if (selectedFile) {
-        viewer.src = selectedFile;
+        image.src = selectedFile;
         downloadLink.href = selectedFile;
         downloadLink.style.display = "inline-block";
 
@@ -18,7 +19,7 @@ document.getElementById("certificateSelect").addEventListener("change", function
         title.textContent = selectedOption.text;
         details.innerHTML = `Kiadó: ${issuer} <br> Kiadás dátuma: ${date} <br> <a href="${verification}" target="_blank">Ellenőrzés</a>`;
     } else {
-        viewer.src = "";
+        image.src = "";
         downloadLink.style.display = "none";
         title.textContent = "";
         details.innerHTML = "";
