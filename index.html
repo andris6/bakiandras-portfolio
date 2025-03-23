@@ -5,27 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólió - Baki András</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark px-3 py-2 d-flex justify-content-center gap-5">
         <span class="navbar-brand mb-0 h1">Baki András</span>
-        <select id="certificateSelect" class="form-select w-auto">
-            <option value="">Válassz egy oklevelet...</option>
-            <option value="javascript.png" data-issuer="freeCodeCamp" data-date="2025-03-23" data-verification="https://www.freecodecamp.org/certification/fcc9fd64275-d1eb-44dc-9368-2131ba98be4e/javascript-algorithms-and-data-structures-v8">JavaScript Algorithms and Data Structures</option>
+        <select id="certificateSelect" class="form-select w-auto me-2">
+            <option value="">Válassz egy certificate-et...</option>
+            <option value="javascript.png" data-issuer="freeCodeCamp" data-date="2024-01-15" data-verification="https://www.freecodecamp.org/certification/bakiandras/javascript">JavaScript Algorithms and Data Structures</option>
         </select>
     </nav>
     
     <div class="container mt-5 text-center">
         <h3 id="certificateTitle"></h3>
         <p id="certificateDetails"></p>
-        <div id="certificateViewer" style="width: 80%; height: 500px; border: 1px solid #ccc; overflow: hidden;">
-            <img id="certificateImage" src="" style="width: 100%; height: 100%; object-fit: contain;" />
+        <div id="certificateViewer" class="certificateViewer">
+            <img id="certificateImage" src="" class="img-fluid" style="cursor: pointer;" />
         </div>
-
         <br>
         <a id="downloadLink" href="#" class="btn btn-primary mt-3" download>Letöltés</a>
     </div>
 
+    <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="certificateModalLabel">Certificate Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                    <a id="modalDownloadLink" href="#" class="btn btn-primary" download>Letöltés</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
