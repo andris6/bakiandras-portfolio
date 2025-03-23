@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólió - Certificate-ek</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark p-3 d-flex justify-content-between">
+        <span class="navbar-brand mb-0 h1">Andrew Portfólió</span>
+        <select id="certificateSelect" class="form-select w-auto">
+            <option value="">Válassz egy certificate-et...</option>
+            <option value="cert1.pdf">Certificate 1</option>
+            <option value="cert2.pdf">Certificate 2</option>
+            <option value="cert3.pdf">Certificate 3</option>
+        </select>
+    </nav>
+    
+    <div class="container mt-5 text-center">
+        <iframe id="certificateViewer" src="" width="80%" height="500px" style="border: 1px solid #ccc;"></iframe>
+        <br>
+        <a id="downloadLink" href="#" class="btn btn-primary mt-3" download>Letöltés</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
