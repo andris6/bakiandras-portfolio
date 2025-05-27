@@ -12,12 +12,12 @@ document.getElementById("certificateSelect").addEventListener("change", function
         downloadLink.href = selectedFile;
         downloadLink.style.display = "inline-block";
 
-        let issuer = selectedOption.getAttribute("data-issuer") || "Ismeretlen kiadó";
+        let issuer = selectedOption.getAttribute("data-issuer") || "Ismeretlen kiállító";
         let date = selectedOption.getAttribute("data-date") || "N/A";
         let verification = selectedOption.getAttribute("data-verification") || "#";
 
         title.textContent = selectedOption.text;
-        details.innerHTML = `Kiadó: ${issuer} <br> Kiadás dátuma: ${date} <br> <a href="${verification}" target="_blank">Ellenőrzés</a>`;
+        details.innerHTML = `Kiállító: ${issuer} <br> Kiállítás dátuma: ${date} <br> <a href="${verification}" target="_blank">Ellenőrzés</a>`;
     } else {
         image.src = "";
         downloadLink.style.display = "none";
