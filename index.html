@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Portfólió - Baki András</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            min-height: 100vh;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .main-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            padding: 2rem;
+            margin-top: -50px; /* Slight overlap with navbar */
+            border: none;
+        }
+        #certificateViewer {
+            background: #eee;
+            border-radius: 8px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #dee2e6;
+        }
+        .hero-spacer {
+            height: 100px;
+            background-color: #212529;
+        }
+        #certificateImage {
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark px-4 py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="navbar-brand mb-0 h1">BAKI ANDRÁS | PORTFÓLIÓ</span>
+            <div class="d-flex align-items-center">
+                <select id="certificateSelect" class="form-select w-auto shadow-sm">
+                    <option value="" disabled selected>Válassz egy oklevelet...</option>
+                    <option value="oklevelek/javascript.png" data-issuer="freeCodeCamp" data-date="2025-03-23" data-verification="https://www.freecodecamp.org/certification/fcc9fd64275-d1eb-44dc-9368-2131ba98be4e/javascript-algorithms-and-data-structures-v8">JavaScript Algorithms and Data Structures</option>
+                    <option value="oklevelek/C.png" data-issuer="Sololearn" data-date="2025-07-19" data-verification="https://www.sololearn.com/certificates/CC-PXWSJOFE">Introduction to C</option>
+                    <option value="oklevelek/hackerrank.jpg" data-issuer="HackerRank" data-date="2025-08-18" data-verification="https://www.hackerrank.com/certificates/020ca3d70ab7">Problem Solving (Basic)</option>
+                    <option value="oklevelek/golang.png" data-issuer="Codecademy" data-date="2025-12-03" data-verification="https://www.codecademy.com/profiles/net8426786291/certificates/60773d2e920679c8e46ff634b9ed2e6e">Learn Go Course</option>
+                    <option value="oklevelek/rust.png" data-issuer="CodeSignal" data-date="2025-12-25" data-verification="https://codesignal.com/learn/certificates/cmefx1p2g000cik04joootufs/courses/186">Rust Programming for Beginners</option>
+                    <option value="oklevelek/harvardx.pdf" data-issuer="HarvardX" data-date="2026-02-03" data-verification="https://courses.edx.org/certificates/deb02b27cbf94b7a9920c074b2dbdc76">HarvardX - PH125.1x: Data Science: R Basics</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-spacer"></div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="main-card">
+                    <div id="contentPlaceholder" class="text-center py-5">
+                        <p class="text-muted">Kérlek, válassz ki egy oklevelet a fenti listából a megtekintéshez.</p>
+                    </div>
+
+                    <div id="certificateContent" style="display: none;">
+                        <div class="row mb-4">
+                            <div class="col-md-8">
+                                <h2 id="certificateTitle" class="fw-bold text-dark"></h2>
+                                <p id="certificateDetails" class="text-secondary mb-0"></p>
+                            </div>
+                            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                                <a id="downloadLink" href="#" class="btn btn-outline-primary shadow-sm" download>
+                                    <i class="bi bi-download"></i> Letöltés
+                                </a>
+                            </div>
+                        </div>
+
+                        <div id="certificateViewer">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 pb-4 text-muted">
+        <small>&copy; 2026 Baki András - Minden jog fenntartva</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
